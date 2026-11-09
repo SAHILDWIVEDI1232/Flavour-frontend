@@ -1,0 +1,370 @@
+
+/* =====================================
+   CREATE FOOD PAGE
+===================================== */
+
+.create-food-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 14px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("/images/create-food-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* =====================================
+   CARD
+===================================== */
+
+.create-food-card {
+    width: 100%;
+    max-width: 450px;
+    min-width: 0;
+    padding: 25px 20px;
+
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    border-radius: 16px;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.create-food-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.create-food-title {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.create-food-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =====================================
+   FORM
+===================================== */
+
+.create-food-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+}
+
+.field-group label {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =====================================
+   INPUTS
+===================================== */
+
+.field-group input:not([type="file"]),
+.field-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+
+    background: rgba(255, 255, 255, 0.16);
+    color: #fff;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 9px;
+
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+
+    transition: all 0.3s ease;
+}
+
+.field-group input::placeholder,
+.field-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+    background: rgba(255, 255, 255, 0.23);
+    border-color: #ff9324;
+    box-shadow: 0 0 0 3px rgba(255, 147, 36, 0.20);
+}
+
+.field-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* =====================================
+   HIDDEN FILE INPUT
+===================================== */
+
+.file-input-hidden {
+    display: none;
+}
+
+/* =====================================
+   VIDEO DROPZONE
+===================================== */
+
+.file-dropzone {
+    width: 100%;
+    min-height: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    border: 2px dashed rgba(255, 255, 255, 0.55);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-dropzone:hover,
+.file-dropzone:focus-visible {
+    border-color: #ff9324;
+    background: rgba(255, 147, 36, 0.15);
+    outline: none;
+}
+
+.file-dropzone-inner {
+    text-align: center;
+}
+
+.file-dropzone-text {
+    color: #fff;
+    font-size: 14px;
+}
+
+.file-dropzone-text strong {
+    color: #ff9324;
+}
+
+.file-hint {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    margin-top: 9px;
+}
+
+/* =====================================
+   ERROR MESSAGE
+===================================== */
+
+.error-text {
+    color: #ffb4a9;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* =====================================
+   SELECTED FILE CHIP
+===================================== */
+
+.file-chip {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    width: 100%;
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.file-chip-name {
+    color: #fff;
+    font-size: 12px;
+    flex: 1;
+    min-width: 100px;
+    overflow-wrap: anywhere;
+}
+
+.file-chip-size {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+}
+
+.file-chip-actions {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.btn-ghost {
+    padding: 7px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+
+    background: transparent;
+    color: #fff;
+
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-ghost:hover {
+    background: #ff9324;
+    border-color: #ff9324;
+}
+
+.btn-ghost.danger:hover {
+    background: #dc3545;
+    border-color: #dc3545;
+}
+
+/* =====================================
+   VIDEO PREVIEW
+===================================== */
+
+.video-preview {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-preview-el {
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* =====================================
+   SUBMIT BUTTON
+===================================== */
+
+.form-actions {
+    width: 100%;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 13px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #ff9324;
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #e77d12;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 147, 36, 0.35);
+}
+
+.btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.btn-primary:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (min-width: 600px) {
+    .create-food-page {
+        padding: 30px;
+    }
+
+    .create-food-card {
+        max-width: 480px;
+        padding: 35px;
+        border-radius: 18px;
+    }
+
+    .create-food-title {
+        font-size: 28px;
+    }
+}
+
+/* =====================================
+   DESKTOP
+===================================== */
+
+@media (min-width: 1024px) {
+    .create-food-card {
+        max-width: 500px;
+        padding: 40px;
+    }
+
+    .field-group input:not([type="file"]),
+    .field-group textarea {
+        font-size: 15px;
+    }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 360px) {
+    .create-food-page {
+        padding: 12px;
+    }
+
+    .create-food-card {
+        padding: 20px 15px;
+    }
+
+    .file-chip-actions {
+        flex-wrap: wrap;
+    }
+}
